@@ -5,7 +5,7 @@ from pyrogram.enums import ChatMemberStatus
 
 from ZenakuXMusic.misc import SUDOERS
 from ZenakuXMusic.utils.database import get_assistant
-from ZenakuXMusic.utils.vip_ban import admin_filter
+from ZenakuXMusic.utils.branded_ban.py import admin_filter
 
 links = {}
 
