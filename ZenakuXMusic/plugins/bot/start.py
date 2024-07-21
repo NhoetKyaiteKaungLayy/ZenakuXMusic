@@ -23,6 +23,12 @@ from ZenakuXMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
+FLASH_STK = [
+"https://t.me/addstickers/Forbidden_15uun",
+"https://t.me/addstickers/Forbidden_10uun",
+
+]
+
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
@@ -32,8 +38,8 @@ async def start_pm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            return await message.reply_photo(
-                photo=config.START_IMG_URL,
+            return await message.reply_sticker(
+                random.choice(FLASH_STK),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
             )
