@@ -17,11 +17,10 @@ from ZenakuXMusic.utils.database import get_assistant
 
 
 photo = [
-    "https://te.legra.ph/file/ab427471fb663d2c5f219.jpg",
-    "https://te.legra.ph/file/ab427471fb663d2c5f219.jpg",
-    "https://tel.egra.ph/file/ab427471fb663d2c5f219.jpg",
-    "https://te.legra.ph/file/ab427471fb663d2c5f219.jpg",
-    "https://te.legra.ph/file/ab427471fb663d2c5f219.jpg",
+    "https://te.legra.ph/file/ffc11d60ac33862209160.jpg",
+    "https://te.legra.ph/file/c3e1e074b0f0bc71b5e8a.jpg",
+    "https://te.legra.ph/file/0c4b5d9110299a5bf6cb8.jpg",
+    "https://te.legra.ph/file/1ab8dffebb6e3050fdc58.jpg",
 ]
 
 
