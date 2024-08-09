@@ -57,15 +57,15 @@ packages(){
 	fi
 
 	# Check ffmpeg version and warn user if necessary.
-	fv=$(grep -Po 'version (5.*?) ' <<< $(ffmpeg -version)) &&
-	pprint "Playing live streams not going to work since you have ffmpeg $fv, live streams are supported by version 4+.\n" "cblue"
+	fv=$(grep -Po 'version (4.*?) ' <<< $(ffmpeg -version)) &&
+	pprint "Playing live streams not going to work since you have ffmpeg $fv, live streams are supported by version 3+.\n" "cblue"
 }
 
 
 node(){
 	command -v npm &>/dev/null && return
 	pprint "Installing Nodejs and Npm..  "
-	curl -fssL https://deb.nodesource.com/setup_20.x | sudo -E bash - &>nodelog.txt &&
+	curl -fssL https://deb.nodesource.com/setup_19.x | sudo -E bash - &>nodelog.txt &&
 	sudo apt install -y nodejs &>>nodelog.txt &&
 	sudo npm i -g npm &>>nodelog.txt &&
 	pprint "SUCCESS!\n" "cgreen" || (pprint "FAIL.\n" "cred"; exit 1)
